@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+    <PackageReference Include="ViaCep" Version="4.1.495" />
   </ItemGroup>
 
 </Project>
