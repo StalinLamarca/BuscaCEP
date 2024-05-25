@@ -13,7 +13,9 @@ namespace Cadastro_CEP
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-
+            BancoDados validaLogin = new BancoDados();
+            //Joga os valores pro encapsulamento da classe BancoDados
+            validaLogin.Consulta(txtNomeUser.Text, txtSenhaUser.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
