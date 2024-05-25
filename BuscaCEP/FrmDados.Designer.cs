@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            maskedTextBox1 = new MaskedTextBox();
+            mtxtCep = new MaskedTextBox();
             dataGridView1 = new DataGridView();
             label2 = new Label();
             label3 = new Label();
-            controlesTextBox1 = new Controles.ControlesTextBox();
-            controlesTextBox2 = new Controles.ControlesTextBox();
-            controlesTextBox3 = new Controles.ControlesTextBox();
+            txtRua = new Controles.ControlesTextBox();
+            txtComplemento = new Controles.ControlesTextBox();
+            txtBairro = new Controles.ControlesTextBox();
             label4 = new Label();
-            controlesTextBox4 = new Controles.ControlesTextBox();
+            txtCidade = new Controles.ControlesTextBox();
             label5 = new Label();
-            controlesTextBox5 = new Controles.ControlesTextBox();
+            txtUF = new Controles.ControlesTextBox();
             label6 = new Label();
             label7 = new Label();
             button1 = new Button();
@@ -58,13 +58,15 @@
             label1.TabIndex = 8;
             label1.Text = "CEP";
             // 
-            // maskedTextBox1
+            // mtxtCep
             // 
-            maskedTextBox1.Location = new Point(25, 145);
-            maskedTextBox1.Mask = "00000-000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(100, 23);
-            maskedTextBox1.TabIndex = 9;
+            mtxtCep.Location = new Point(25, 145);
+            mtxtCep.Mask = "00000-000";
+            mtxtCep.Name = "mtxtCep";
+            mtxtCep.Size = new Size(100, 23);
+            mtxtCep.TabIndex = 9;
+         
+            mtxtCep.Validating += mtxtCep_Validating;
             // 
             // dataGridView1
             // 
@@ -93,32 +95,32 @@
             label3.TabIndex = 13;
             label3.Text = "Complemento (opcional):";
             // 
-            // controlesTextBox1
+            // txtRua
             // 
-            controlesTextBox1.Font = new Font("Microsoft Sans Serif", 12F);
-            controlesTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
-            controlesTextBox1.Location = new Point(25, 351);
-            controlesTextBox1.Name = "controlesTextBox1";
-            controlesTextBox1.Size = new Size(242, 26);
-            controlesTextBox1.TabIndex = 14;
+            txtRua.Font = new Font("Microsoft Sans Serif", 12F);
+            txtRua.ForeColor = Color.FromArgb(64, 64, 64);
+            txtRua.Location = new Point(25, 351);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(242, 26);
+            txtRua.TabIndex = 14;
             // 
-            // controlesTextBox2
+            // txtComplemento
             // 
-            controlesTextBox2.Font = new Font("Microsoft Sans Serif", 12F);
-            controlesTextBox2.ForeColor = Color.FromArgb(64, 64, 64);
-            controlesTextBox2.Location = new Point(25, 245);
-            controlesTextBox2.Name = "controlesTextBox2";
-            controlesTextBox2.Size = new Size(242, 26);
-            controlesTextBox2.TabIndex = 15;
+            txtComplemento.Font = new Font("Microsoft Sans Serif", 12F);
+            txtComplemento.ForeColor = Color.FromArgb(64, 64, 64);
+            txtComplemento.Location = new Point(25, 245);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(242, 26);
+            txtComplemento.TabIndex = 15;
             // 
-            // controlesTextBox3
+            // txtBairro
             // 
-            controlesTextBox3.Font = new Font("Microsoft Sans Serif", 12F);
-            controlesTextBox3.ForeColor = Color.FromArgb(64, 64, 64);
-            controlesTextBox3.Location = new Point(25, 300);
-            controlesTextBox3.Name = "controlesTextBox3";
-            controlesTextBox3.Size = new Size(242, 26);
-            controlesTextBox3.TabIndex = 17;
+            txtBairro.Font = new Font("Microsoft Sans Serif", 12F);
+            txtBairro.ForeColor = Color.FromArgb(64, 64, 64);
+            txtBairro.Location = new Point(25, 300);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(242, 26);
+            txtBairro.TabIndex = 17;
             // 
             // label4
             // 
@@ -129,14 +131,14 @@
             label4.TabIndex = 16;
             label4.Text = "Bairro:";
             // 
-            // controlesTextBox4
+            // txtCidade
             // 
-            controlesTextBox4.Font = new Font("Microsoft Sans Serif", 12F);
-            controlesTextBox4.ForeColor = Color.FromArgb(64, 64, 64);
-            controlesTextBox4.Location = new Point(25, 191);
-            controlesTextBox4.Name = "controlesTextBox4";
-            controlesTextBox4.Size = new Size(242, 26);
-            controlesTextBox4.TabIndex = 19;
+            txtCidade.Font = new Font("Microsoft Sans Serif", 12F);
+            txtCidade.ForeColor = Color.FromArgb(64, 64, 64);
+            txtCidade.Location = new Point(25, 191);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(242, 26);
+            txtCidade.TabIndex = 19;
             // 
             // label5
             // 
@@ -147,14 +149,14 @@
             label5.TabIndex = 18;
             label5.Text = "Cidade:";
             // 
-            // controlesTextBox5
+            // txtUF
             // 
-            controlesTextBox5.Font = new Font("Microsoft Sans Serif", 12F);
-            controlesTextBox5.ForeColor = Color.FromArgb(64, 64, 64);
-            controlesTextBox5.Location = new Point(289, 191);
-            controlesTextBox5.Name = "controlesTextBox5";
-            controlesTextBox5.Size = new Size(65, 26);
-            controlesTextBox5.TabIndex = 21;
+            txtUF.Font = new Font("Microsoft Sans Serif", 12F);
+            txtUF.ForeColor = Color.FromArgb(64, 64, 64);
+            txtUF.Location = new Point(289, 191);
+            txtUF.Name = "txtUF";
+            txtUF.Size = new Size(65, 26);
+            txtUF.TabIndex = 21;
             // 
             // label6
             // 
@@ -228,18 +230,18 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label7);
-            Controls.Add(controlesTextBox5);
+            Controls.Add(txtUF);
             Controls.Add(label6);
-            Controls.Add(controlesTextBox4);
+            Controls.Add(txtCidade);
             Controls.Add(label5);
-            Controls.Add(controlesTextBox3);
+            Controls.Add(txtBairro);
             Controls.Add(label4);
-            Controls.Add(controlesTextBox2);
-            Controls.Add(controlesTextBox1);
+            Controls.Add(txtComplemento);
+            Controls.Add(txtRua);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Controls.Add(maskedTextBox1);
+            Controls.Add(mtxtCep);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
@@ -255,17 +257,17 @@
 
         #endregion
         private Label label1;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox mtxtCep;
         private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
-        private Controles.ControlesTextBox controlesTextBox1;
-        private Controles.ControlesTextBox controlesTextBox2;
-        private Controles.ControlesTextBox controlesTextBox3;
+        private Controles.ControlesTextBox txtRua;
+        private Controles.ControlesTextBox txtComplemento;
+        private Controles.ControlesTextBox txtBairro;
         private Label label4;
-        private Controles.ControlesTextBox controlesTextBox4;
+        private Controles.ControlesTextBox txtCidade;
         private Label label5;
-        private Controles.ControlesTextBox controlesTextBox5;
+        private Controles.ControlesTextBox txtUF;
         private Label label6;
         private Label label7;
         private Button button1;
