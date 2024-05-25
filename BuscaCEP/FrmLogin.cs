@@ -1,5 +1,6 @@
 using BuscaCEP;
 using System.Reflection;
+using System.Threading;
 
 namespace Cadastro_CEP
 {
@@ -16,6 +17,20 @@ namespace Cadastro_CEP
             BancoDados validaLogin = new BancoDados();
             //Joga os valores pro encapsulamento da classe BancoDados
             validaLogin.Consulta(txtNomeUser.Text, txtSenhaUser.Text);
+            
+            txtSenhaUser.Text = string.Empty;
+            if (Variaveis.sucess)
+            {
+               
+                FrmDados dados = new FrmDados();
+                this.Hide();
+                dados.ShowDialog();
+                
+
+            }
+
+            this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -26,8 +26,8 @@ namespace BuscaCEP
             cmd.ExecuteNonQuery();
             
             conexao.Close();
-           
 
+          
             
 
         }
@@ -40,15 +40,32 @@ namespace BuscaCEP
                 //realiza a consulta pelos campos usuário e senha
                 SQLiteDataAdapter adap = new SQLiteDataAdapter(busca, conexao);
                 DataTable tabela = new DataTable();
-                adap.Fill(tabela);
+
                 //retorna o nome do usuário no Messagebox
-                MessageBox.Show("Bem vindo " + Convert.ToString(tabela.Rows[0][1]),"Login efetuado!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                adap.Fill(tabela);
               
+                if (senha.Equals(Convert.ToString(tabela.Rows[0][3]))){
+                    Variaveis.sucess = true;
+                    MessageBox.Show("Bem vindo " + Convert.ToString(tabela.Rows[0][1]), "Login efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                }
+                else
+                {
+                    Variaveis.sucess = false;
+                    MessageBox.Show("Usuário ou senha incorretos!","Erro",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+                
+               
+
+
             }
             catch (Exception)
             {
-                //se não corresponder, mostra a mensagem abaixo
+                //se não retornar nada, mostra a mensagem abaixo
 
+                Variaveis.sucess = false;
                 MessageBox.Show("Usuário ou senha incorretos!","Erro",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
