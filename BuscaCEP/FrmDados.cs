@@ -96,7 +96,7 @@ namespace BuscaCEP
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Variaveis.dadosCarregados.Clear();
             //para cada caixa de texto no formulario atual (dados)
             foreach (TextBox vazio in Controls.OfType<TextBox>())
             {
@@ -136,6 +136,28 @@ namespace BuscaCEP
 
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string a = dataGridView1.CurrentCell.RowIndex.ToString();
+
+
+            MessageBox.Show( dataGridView1.SelectedCells[0].Value.ToString() + "'");
+
+            //SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query2, "Data source =" + Variaveis.DB);
+            //DataTable dados = new DataTable();
+            //adaptador.Fill(dados);
+
+            //lblNome.Text = "Nome: " + dataGridView1.SelectedCells[1].Value.ToString();
+            //lblSexo.Text = "Sexo: " + dataGridView1.SelectedCells[2].Value.ToString();
+            //lblDataNasc.Text = "Data Nasc: " + dataGridView1.SelectedCells[4].Value.ToString();
+            //lblTelefone.Text = "Telefone " + dataGridView1.SelectedCells[6].Value.ToString();
+            //Variaveis.Grau = dataGridView1.SelectedCells[3].Value.ToString();
+
+
+            //pctAluno.Load(Convert.ToString(dados.Rows[0][0]));
+            //Variaveis.selecionada = (Convert.ToString(dados.Rows[0][0]));
+
+            //Variaveis.selec = dataGridView1.SelectedCells[0].Value.ToString();
+        }
     }
 }
