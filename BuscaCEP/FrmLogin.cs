@@ -17,10 +17,10 @@ namespace Cadastro_CEP
             BancoDados validaLogin = new BancoDados();
             //Joga os valores pro encapsulamento da classe BancoDados
             validaLogin.Consulta(txtNomeUser.Text, txtSenhaUser.Text);
-            
+            //esvazia o campo senha
             txtSenhaUser.Text = string.Empty;
             if (Variaveis.sucess)
-            {
+            {//se tiver sucsso no logon, abre o frame de cadastro/consulta
                
                 FrmDados dados = new FrmDados();
                 this.Hide();
@@ -29,7 +29,7 @@ namespace Cadastro_CEP
 
             }
 
-            this.Close();
+           
 
         }
 

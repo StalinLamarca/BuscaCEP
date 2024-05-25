@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace BuscaCEP
         public static string bairro { get; set; }
         public static string cidade { get; set; }
         public static bool sucess = false; 
+        public static DataTable dadosCarregados = new DataTable(); 
         public static string uf { get; set; }
         public static string Db  = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Dados.db";
 

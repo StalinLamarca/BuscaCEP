@@ -17,9 +17,20 @@ namespace BuscaCEP
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmDados_Load(object sender, EventArgs e)
+        {
+
+            //instancia objeto da Classe data
+            BancoDados data = new BancoDados();
+            //executa o metodo para carregar dados no datagridview
+            data.FrmDaDOS();
         }
     }
 }

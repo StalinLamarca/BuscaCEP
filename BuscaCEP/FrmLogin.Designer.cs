@@ -113,6 +113,7 @@
             // button1
             // 
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Red;
             button1.Location = new Point(495, 0);
             button1.Name = "button1";
