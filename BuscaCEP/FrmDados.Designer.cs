@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             mtxtCep = new MaskedTextBox();
-            dataGridView1 = new DataGridView();
             label2 = new Label();
             label3 = new Label();
             txtRua = new Controles.ControlesTextBox();
@@ -46,6 +45,9 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            txtNumero = new Controles.ControlesTextBox();
+            label8 = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -64,18 +66,8 @@
             mtxtCep.Mask = "00000-000";
             mtxtCep.Name = "mtxtCep";
             mtxtCep.Size = new Size(100, 23);
-            mtxtCep.TabIndex = 9;
-         
+            mtxtCep.TabIndex = 15;
             mtxtCep.Validating += mtxtCep_Validating;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.SteelBlue;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(364, 144);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(586, 234);
-            dataGridView1.TabIndex = 10;
             // 
             // label2
             // 
@@ -111,7 +103,7 @@
             txtComplemento.Location = new Point(25, 245);
             txtComplemento.Name = "txtComplemento";
             txtComplemento.Size = new Size(242, 26);
-            txtComplemento.TabIndex = 15;
+            txtComplemento.TabIndex = 9;
             // 
             // txtBairro
             // 
@@ -199,6 +191,7 @@
             button2.TabIndex = 24;
             button2.Text = "Salvar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -218,6 +211,46 @@
             button4.Text = "Apagar dados";
             button4.UseVisualStyleBackColor = true;
             // 
+            // txtNumero
+            // 
+            txtNumero.Font = new Font("Microsoft Sans Serif", 12F);
+            txtNumero.ForeColor = Color.FromArgb(64, 64, 64);
+            txtNumero.Location = new Point(289, 245);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(65, 26);
+            txtNumero.TabIndex = 28;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(289, 227);
+            label8.Name = "label8";
+            label8.Size = new Size(21, 15);
+            label8.TabIndex = 27;
+            label8.Text = "N°";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.Location = new Point(366, 157);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.ShowCellErrors = false;
+            dataGridView1.ShowCellToolTips = false;
+            dataGridView1.ShowEditingIcon = false;
+            dataGridView1.ShowRowErrors = false;
+            dataGridView1.Size = new Size(584, 238);
+            dataGridView1.TabIndex = 29;
+            // 
             // FrmDados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -225,6 +258,9 @@
             BackColor = Color.SteelBlue;
             ClientSize = new Size(962, 483);
             ControlBox = false;
+            Controls.Add(dataGridView1);
+            Controls.Add(txtNumero);
+            Controls.Add(label8);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -240,7 +276,6 @@
             Controls.Add(txtRua);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
             Controls.Add(mtxtCep);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -258,7 +293,6 @@
         #endregion
         private Label label1;
         private MaskedTextBox mtxtCep;
-        private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
         private Controles.ControlesTextBox txtRua;
@@ -274,5 +308,8 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Controles.ControlesTextBox txtNumero;
+        private Label label8;
+        private DataGridView dataGridView1;
     }
 }

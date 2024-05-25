@@ -26,6 +26,7 @@ namespace Cadastro_CEP
                 this.Hide();
                 dados.ShowDialog();
                 
+                this.Show();
 
             }
 

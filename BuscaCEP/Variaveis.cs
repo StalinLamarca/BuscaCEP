@@ -11,7 +11,7 @@ namespace BuscaCEP
     public static class Variaveis
     {
 
-        public static int cep { get; set; }
+        public static string cep { get; set; }
         public static string nome { get; set; }
         public static string usuario { get; set; }
         public static string senha { get; set; }

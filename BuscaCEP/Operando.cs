@@ -38,8 +38,7 @@ namespace BuscaCEP
                      " ('Administrador', 'admin', 'admin1234' )");
                
 
-                //senha de criptografia tabela
-                dados.Executar( "PRAGMA KEY = 'senha1234*'");
+               
                 
 
 
@@ -49,11 +48,12 @@ namespace BuscaCEP
                 "[ID] INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "[CEP] varchar(50)," +
                 "[LOGRADOURO] varchar(12)," +
-                "[complemento] varchar(11), " +
+                "[COMPLEMENTO] varchar(11), " +
                 "[BAIRRO] varchar(11), " +
+                "[NUMERO] varchar(11), " +
                 "[CIDADE]varchar(11), " +
                 "[UF] varchar(11), " +
-                "[ID_USUARIO] varchar(11), FOREIGN KEY([ID_USUARIO]) REFERENCES enderecos(ID)); ";
+                "[ID_USUARIO] varchar(11), FOREIGN KEY([ID_USUARIO]) REFERENCES Usuarios(ID)); ";
 
                 dados.Executar(valores);
 
