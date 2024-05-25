@@ -1,3 +1,5 @@
+using Cadastro_CEP;
+
 namespace BuscaCEP
 {
     internal static class Program
