@@ -1,3 +1,4 @@
+using BuscaCEP;
 using System.Reflection;
 
 namespace Cadastro_CEP
@@ -24,7 +25,9 @@ namespace Cadastro_CEP
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            
+            //instancia operando para verificar se existe o banco de dados e se caso não existir, cria um novo com as tabelas.
+            Operando operando = new Operando();
+            operando.Conexao();
         }
     }
 }

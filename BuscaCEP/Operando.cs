@@ -10,26 +10,19 @@ namespace BuscaCEP
     public class Operando
     {
 
-        //string de apontamento para o direótio do banco de dados, por padrão essa linha pega o %appdata% do usuário atual
-
-        string con = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Dados.db";
-
+      
 
         //metodo para realizar conexão ao banco de dados
         public void Conexao()
         {
-
+            BancoDados dados = new BancoDados();
             //Checka se existe o banco de dados
-            if (!File.Exists(con))
+            if (!File.Exists(Variaveis.Db))
             {
                 //Se não existir, ele cria o "Dados.db" no appdata do user
-                SQLiteConnection.CreateFile(con);
+                SQLiteConnection.CreateFile(Variaveis.Db);
 
-                //Após criar, conecta ao banco e abre a conexão (O "data source" é um comando padrão para apontar para o sql de onde ele deve carregar o banco de dados
-                SQLiteConnection conexao = new SQLiteConnection("Data source =" + con + "; Version = 3;");
-
-                conexao.Open();
-
+                
                 //cria a tabela "usuários" com campos ID, NOME USUARIO E SENHA
                 string valores = "CREATE TABLE Usuarios"
                   + "( " +
@@ -37,18 +30,17 @@ namespace BuscaCEP
                   "[NOME] varchar(50), " +
                   "[USUARIO] varchar(1)," +
                   "[SENHA] varchar(11))";
+                dados.Executar(valores);
 
-                SQLiteCommand cmd = new SQLiteCommand(valores, conexao);
-                //executa o comando de criar a tabela
-                cmd.ExecuteNonQuery();
+              
                 //string para inserir o usuario adm na tabela criada
-                cmd.CommandText = "INSERT INTO Usuarios (Nome,usuario,senha) VALUES" +
-                     " ('Administrador', 'admin', 'admin1234' )";
-                cmd.ExecuteNonQuery();
+                dados.Executar("INSERT INTO Usuarios (Nome,usuario,senha) VALUES" +
+                     " ('Administrador', 'admin', 'admin1234' )");
+               
 
-                //senha da tabela
-                cmd.CommandText = "PRAGMA KEY = 'senha1234*'";
-                // cmd.ExecuteNonQuery();
+                //senha de criptografia tabela
+                dados.Executar( "PRAGMA KEY = 'senha1234*'");
+                
 
 
                 // cria tabela de Endereços
@@ -63,14 +55,9 @@ namespace BuscaCEP
                 "[UF] varchar(11), " +
                 "[ID_USUARIO] varchar(11), FOREIGN KEY([ID_USUARIO]) REFERENCES enderecos(ID)); ";
 
-                cmd.CommandText = valores;
+                dados.Executar(valores);
 
-                cmd.ExecuteNonQuery();
-                //fechar a conexão após executar os comandos
-                conexao.Close();
-                //livrar a memória
-                conexao.Dispose();
-
+              
             }
 
         }

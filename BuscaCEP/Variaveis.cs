@@ -21,6 +21,8 @@ namespace BuscaCEP
         public static string bairro { get; set; }
         public static string cidade { get; set; }
         public static string uf { get; set; }
+        public static string Db  = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Dados.db";
+
 
     }
 }
