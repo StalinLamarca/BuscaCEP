@@ -16,39 +16,39 @@ Senha: admin1234
 
 # Layout Desktop
 
-Tela de Login
+## Tela de Login
 [![Desktop](https://github.com/StalinLamarca/assets/blob/main/Login.png)
 
 Tela de cadastro usuário
 [![Desktop](https://github.com/StalinLamarca/assets/blob/main/cadastro1.png)
 
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 Back end
 C#
 SQL
 
-# Front end
+## Front end
 C# Windows Form
 
 
 #Banco de dados#: SQL Compact Edition
 
-# Como executar o projeto
+## Como executar o projeto
 
 Pré-requisitos: .Net Core 8.0
 
-# clonar repositório
+## clonar repositório
 [git clone https://github.com/StalinLamarca/BuscaCEP.git]
 
 
 
-# executar o projeto
+## executar o projeto
 Abrir BuscaCEP.sln
 Pré-requisitos: Visual Studio Commnunity
 
 
-# instalar dependências
+## instalar dependências
 dotnet add package Microsoft.SqlServer.Compact --version 4.0.8876.1
 
 
