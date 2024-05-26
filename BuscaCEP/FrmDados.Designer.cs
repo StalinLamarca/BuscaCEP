@@ -48,6 +48,7 @@
             txtNumero = new Controles.ControlesTextBox();
             label8 = new Label();
             dataGridView1 = new DataGridView();
+            btnExportar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -195,7 +196,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(507, 366);
+            btnEditar.Location = new Point(437, 366);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(99, 23);
             btnEditar.TabIndex = 25;
@@ -205,7 +206,7 @@
             // 
             // btApagar
             // 
-            btApagar.Location = new Point(660, 365);
+            btApagar.Location = new Point(603, 366);
             btApagar.Name = "btApagar";
             btApagar.Size = new Size(111, 23);
             btApagar.TabIndex = 26;
@@ -256,6 +257,16 @@
             dataGridView1.Size = new Size(584, 238);
             dataGridView1.TabIndex = 29;
             // 
+            // btnExportar
+            // 
+            btnExportar.Location = new Point(776, 366);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new Size(118, 23);
+            btnExportar.TabIndex = 30;
+            btnExportar.Text = "Exportar para Excel";
+            btnExportar.UseVisualStyleBackColor = true;
+            btnExportar.Click += btnExportar_Click;
+            // 
             // FrmDados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -263,6 +274,7 @@
             BackColor = Color.SteelBlue;
             ClientSize = new Size(962, 426);
             ControlBox = false;
+            Controls.Add(btnExportar);
             Controls.Add(dataGridView1);
             Controls.Add(txtNumero);
             Controls.Add(label8);
@@ -316,5 +328,6 @@
         private Controles.ControlesTextBox txtNumero;
         private Label label8;
         private DataGridView dataGridView1;
+        private Button btnExportar;
     }
 }

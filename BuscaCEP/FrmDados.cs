@@ -64,9 +64,9 @@ namespace BuscaCEP
             catch (Exception)
             {
 
-               
+
             }
-           
+
 
 
 
@@ -107,7 +107,7 @@ namespace BuscaCEP
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
             //para cada caixa de texto no formulario atual (dados)
             foreach (TextBox vazio in Controls.OfType<TextBox>())
             {
@@ -179,9 +179,9 @@ namespace BuscaCEP
                 MessageBox.Show("Não há dados a serem modificados!");
                 return;
             }
-            
-           
-            
+
+
+
             //pega todos valores das linhas selecionadas e joga no data grid
             mtxtCep.Text = dataGridView1.SelectedCells[1].Value.ToString();
             txtRua.Text = dataGridView1.SelectedCells[2].Value.ToString();
@@ -197,7 +197,7 @@ namespace BuscaCEP
         {
             //habilita somente o deletar no metódo EditaDB;
             Variaveis.Editar = "Deletar";
-            EditaDB edita  = new EditaDB();
+            EditaDB edita = new EditaDB();
             try
             {
                 //valida se há dados na tabela, caso não tenha, exibe a mensagem e retorna o bloco de código
@@ -208,13 +208,20 @@ namespace BuscaCEP
 
                 MessageBox.Show("Não há dados a serem modificados!");
                 //havia um bug que mesmo com a planilha vazia, ele aparecia o Messagebox questionando se deseja deletar dados
-                Variaveis.Editar= string.Empty;
+                Variaveis.Editar = string.Empty;
                 return;
             }
 
-           
+
             edita.Editar();
             Variaveis.Editar = string.Empty;
+
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+
+            //botão responsável por exportar dados para o Excel
 
         }
     }
