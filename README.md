@@ -27,8 +27,7 @@ Senha: admin1234
 
 
 ## Tecnologias utilizadas
-Back end
-C#
+C# e
 SQL
 
 ## Front end
