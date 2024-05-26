@@ -20,7 +20,7 @@ namespace BuscaCEP
         {
             InitializeComponent();
 
-
+            Variaveis.dadosCarregados.Clear();
         }
 
 
@@ -98,12 +98,12 @@ namespace BuscaCEP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Variaveis.dadosCarregados.Clear();
+            
             //para cada caixa de texto no formulario atual (dados)
             foreach (TextBox vazio in Controls.OfType<TextBox>())
             {
                 //se algum estivar vazio
-                if (vazio.Text.Equals(string.Empty))
+                if (vazio.Text.Equals(string.Empty) || mtxtCep.Text.Equals(string.Empty))
                 {
                     //retorna essa mensagem e o campo vazio fica em foco
                     MessageBox.Show("Campos vazios, gentileza verificar!");
@@ -111,9 +111,13 @@ namespace BuscaCEP
 
                     return;
                 }
+                else
+                {
+                    
+                }
 
             }
-
+            Variaveis.dadosCarregados.Clear();
 
 
             //pega os dados e joga nas variaveis pra salvar no sql

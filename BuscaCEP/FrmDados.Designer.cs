@@ -54,7 +54,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 127);
+            label1.Location = new Point(25, 81);
             label1.Name = "label1";
             label1.Size = new Size(28, 15);
             label1.TabIndex = 8;
@@ -62,7 +62,7 @@
             // 
             // mtxtCep
             // 
-            mtxtCep.Location = new Point(25, 145);
+            mtxtCep.Location = new Point(25, 99);
             mtxtCep.Mask = "00000-000";
             mtxtCep.Name = "mtxtCep";
             mtxtCep.Size = new Size(100, 23);
@@ -72,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 333);
+            label2.Location = new Point(25, 287);
             label2.Name = "label2";
             label2.Size = new Size(72, 15);
             label2.TabIndex = 11;
@@ -81,7 +81,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 227);
+            label3.Location = new Point(25, 181);
             label3.Name = "label3";
             label3.Size = new Size(144, 15);
             label3.TabIndex = 13;
@@ -91,7 +91,7 @@
             // 
             txtRua.Font = new Font("Microsoft Sans Serif", 12F);
             txtRua.ForeColor = Color.FromArgb(64, 64, 64);
-            txtRua.Location = new Point(25, 351);
+            txtRua.Location = new Point(25, 305);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(242, 26);
             txtRua.TabIndex = 14;
@@ -100,7 +100,7 @@
             // 
             txtComplemento.Font = new Font("Microsoft Sans Serif", 12F);
             txtComplemento.ForeColor = Color.FromArgb(64, 64, 64);
-            txtComplemento.Location = new Point(25, 245);
+            txtComplemento.Location = new Point(25, 199);
             txtComplemento.Name = "txtComplemento";
             txtComplemento.Size = new Size(242, 26);
             txtComplemento.TabIndex = 9;
@@ -109,7 +109,7 @@
             // 
             txtBairro.Font = new Font("Microsoft Sans Serif", 12F);
             txtBairro.ForeColor = Color.FromArgb(64, 64, 64);
-            txtBairro.Location = new Point(25, 300);
+            txtBairro.Location = new Point(25, 254);
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(242, 26);
             txtBairro.TabIndex = 17;
@@ -117,7 +117,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 282);
+            label4.Location = new Point(25, 236);
             label4.Name = "label4";
             label4.Size = new Size(41, 15);
             label4.TabIndex = 16;
@@ -127,7 +127,7 @@
             // 
             txtCidade.Font = new Font("Microsoft Sans Serif", 12F);
             txtCidade.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCidade.Location = new Point(25, 191);
+            txtCidade.Location = new Point(25, 145);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(242, 26);
             txtCidade.TabIndex = 19;
@@ -135,7 +135,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(25, 173);
+            label5.Location = new Point(25, 127);
             label5.Name = "label5";
             label5.Size = new Size(47, 15);
             label5.TabIndex = 18;
@@ -145,7 +145,7 @@
             // 
             txtUF.Font = new Font("Microsoft Sans Serif", 12F);
             txtUF.ForeColor = Color.FromArgb(64, 64, 64);
-            txtUF.Location = new Point(289, 191);
+            txtUF.Location = new Point(289, 145);
             txtUF.Name = "txtUF";
             txtUF.Size = new Size(65, 26);
             txtUF.TabIndex = 21;
@@ -153,7 +153,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(289, 173);
+            label6.Location = new Point(289, 127);
             label6.Name = "label6";
             label6.Size = new Size(24, 15);
             label6.TabIndex = 20;
@@ -185,7 +185,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(94, 412);
+            btnSalvar.Location = new Point(94, 366);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 24;
@@ -195,7 +195,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(507, 412);
+            btnEditar.Location = new Point(507, 366);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(99, 23);
             btnEditar.TabIndex = 25;
@@ -205,7 +205,7 @@
             // 
             // btApagar
             // 
-            btApagar.Location = new Point(660, 411);
+            btApagar.Location = new Point(660, 365);
             btApagar.Name = "btApagar";
             btApagar.Size = new Size(111, 23);
             btApagar.TabIndex = 26;
@@ -216,7 +216,7 @@
             // 
             txtNumero.Font = new Font("Microsoft Sans Serif", 12F);
             txtNumero.ForeColor = Color.FromArgb(64, 64, 64);
-            txtNumero.Location = new Point(289, 245);
+            txtNumero.Location = new Point(289, 199);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(65, 26);
             txtNumero.TabIndex = 28;
@@ -224,7 +224,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(289, 227);
+            label8.Location = new Point(289, 181);
             label8.Name = "label8";
             label8.Size = new Size(21, 15);
             label8.TabIndex = 27;
@@ -235,13 +235,13 @@
             dataGridView1.AccessibleRole = AccessibleRole.ScrollBar;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView1.Location = new Point(366, 157);
+            dataGridView1.Location = new Point(366, 117);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -261,7 +261,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
-            ClientSize = new Size(962, 483);
+            ClientSize = new Size(962, 426);
             ControlBox = false;
             Controls.Add(dataGridView1);
             Controls.Add(txtNumero);
