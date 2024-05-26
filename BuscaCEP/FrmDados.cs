@@ -57,7 +57,16 @@ namespace BuscaCEP
             //joga dados carregados da variavel para o dataGrid
             dataGridView1.DataSource = Variaveis.dadosCarregados;
             //oculta a coluna ID pra ficar bonitinho pro usuário
-            dataGridView1.Columns[0].Visible = false;
+            try
+            {
+                dataGridView1.Columns[0].Visible = false;
+            }
+            catch (Exception)
+            {
+
+               
+            }
+           
 
 
 
@@ -198,12 +207,15 @@ namespace BuscaCEP
             {
 
                 MessageBox.Show("Não há dados a serem modificados!");
+                //havia um bug que mesmo com a planilha vazia, ele aparecia o Messagebox questionando se deseja deletar dados
+                Variaveis.Editar= string.Empty;
                 return;
             }
 
            
             edita.Editar();
-            
+            Variaveis.Editar = string.Empty;
+
         }
     }
 }
