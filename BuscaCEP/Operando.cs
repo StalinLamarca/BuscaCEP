@@ -19,9 +19,10 @@ namespace BuscaCEP
             //Checka se existe o banco de dados
             if (!File.Exists(Variaveis.Db))
             {
-                //Se não existir, ele cria o "Dados.db" no appdata do user
+                //Se não existir, ele cria o "Dados.sdf" no appdataLocal do user
                 
-                SqlCeEngine criar = new SqlCeEngine("Data source="+Variaveis.Db+"; Password=senhasenha;");
+                //Cria o banco de dados com a senha "senhasenha" e a criptografa
+                SqlCeEngine criar = new SqlCeEngine("Data source="+Variaveis.Db+ "; Password=senhasenha; Encrypt Database=True");
                 criar.CreateDatabase();
 
                 
