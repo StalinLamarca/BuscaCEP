@@ -37,6 +37,7 @@
             label3 = new Label();
             btnEntrar = new Button();
             button1 = new Button();
+            lnkCriarLogin = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -123,12 +124,24 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // lnkCriarLogin
+            // 
+            lnkCriarLogin.AutoSize = true;
+            lnkCriarLogin.Location = new Point(269, 256);
+            lnkCriarLogin.Name = "lnkCriarLogin";
+            lnkCriarLogin.Size = new Size(187, 15);
+            lnkCriarLogin.TabIndex = 6;
+            lnkCriarLogin.TabStop = true;
+            lnkCriarLogin.Text = "Não possui Login? Crie seu acesso";
+            lnkCriarLogin.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             ClientSize = new Size(528, 280);
+            Controls.Add(lnkCriarLogin);
             Controls.Add(button1);
             Controls.Add(btnEntrar);
             Controls.Add(txtSenhaUser);
@@ -159,5 +172,6 @@
         private Label label3;
         private Button btnEntrar;
         private Button button1;
+        private LinkLabel lnkCriarLogin;
     }
 }

@@ -17,14 +17,19 @@ namespace BuscaCEP
 
             //salva apenas em .CSV
             dialogo.Filter = "Arquivos Excel (*.CSV)|*CSV";
-            
+            dialogo.DefaultExt = ".csv";
+            dialogo.AddExtension = true;
+
             //consulta se o usuário escolheu o caminho e nome para salvar
-            if(DialogResult.OK == dialogo.ShowDialog())
+            if (DialogResult.OK == dialogo.ShowDialog())
             {
                 try
                 {
+                    
+                    
                     //Objeto para pegar o diretório do arquivo e nome + .CSV
-                    StreamWriter salvarArq = new StreamWriter(dialogo.FileName);
+                    StreamWriter salvarArq = new StreamWriter(dialogo.FileName,false);
+                    
                     
                     //Varre todas tabelas da coluna atpe chegar ao limite
                     for (int i = 0; i < tabela.Columns.Count; i++)

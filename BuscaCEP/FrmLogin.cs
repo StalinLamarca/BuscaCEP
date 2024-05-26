@@ -21,16 +21,16 @@ namespace Cadastro_CEP
             txtSenhaUser.Text = string.Empty;
             if (Variaveis.sucess)
             {//se tiver sucsso no logon, abre o frame de cadastro/consulta
-               
+
                 FrmDados dados = new FrmDados();
                 this.Hide();
                 dados.ShowDialog();
-                
+
                 this.Show();
 
             }
 
-           
+
 
         }
 
@@ -46,6 +46,14 @@ namespace Cadastro_CEP
             //instancia operando para verificar se existe o banco de dados e se caso não existir, cria um novo com as tabelas.
             Operando operando = new Operando();
             operando.Criar();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //abre o frame de criar login
+            CriarLogin criar = new CriarLogin();
+            criar.ShowDialog();
+
         }
     }
 }

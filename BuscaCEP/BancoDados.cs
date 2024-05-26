@@ -140,6 +140,7 @@ namespace BuscaCEP
             }
             catch (Exception)
             {
+                
                 MessageBox.Show("Não há dados na planilha", "Sem dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conexao.Close();
                 return;

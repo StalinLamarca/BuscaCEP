@@ -32,7 +32,7 @@ namespace BuscaCEP
                   + "( " +
                   "[ID] INT PRIMARY KEY IDENTITY(1,1), " +
                   "[NOME] nvarchar(100), " +
-                  "[USUARIO] nvarchar(20)," +
+                  "[USUARIO] nvarchar(15)," +
                   "[SENHA] nvarchar(11))";
                 dados.Executar(valores);
 

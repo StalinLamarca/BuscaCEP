@@ -60,10 +60,11 @@ namespace BuscaCEP
             try
             {
                 dataGridView1.Columns[0].Visible = false;
+                
             }
             catch (Exception)
             {
-
+               
 
             }
 
