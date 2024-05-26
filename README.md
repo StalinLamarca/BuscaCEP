@@ -1,6 +1,6 @@
 # BuscaCEP
 
-[![NPM](https://img.shields.io/npm/l/react](https://github.com/StalinLamarca/BuscaCEP)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/StalinLamarca/BuscaCEP/blob/master/LICENSE.txt)
 
 # Sobre o Projeto
 BUSCACEP é uma aplicação full stack desktop construída durante processo seletivo organizado pela evento AeC Centro de Contatos. [https://www.aec.com.br/]
@@ -19,7 +19,7 @@ Senha: admin1234
 ## Tela de Login
 [![Desktop](https://github.com/StalinLamarca/assets/blob/main/Login.png)
 
-Tela de cadastro usuário
+## Tela de cadastro usuário
 [![Desktop](https://github.com/StalinLamarca/assets/blob/main/cadastro1.png)
 
 
