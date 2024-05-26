@@ -60,6 +60,7 @@ namespace BuscaCEP
             //valida se o modo edição está ativo
             if (Variaveis.Editar.Equals("Novo"))
             {
+               
                 manipular.Executar(Insere);
             }
             //valida se o editar está ativo

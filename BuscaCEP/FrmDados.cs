@@ -27,8 +27,8 @@ namespace BuscaCEP
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-
+            //limpa o id do usuario ao fechar o form
+            Variaveis.id = 0;
             this.Close();
 
         }

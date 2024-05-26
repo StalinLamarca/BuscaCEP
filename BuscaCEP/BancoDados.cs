@@ -76,7 +76,7 @@ namespace BuscaCEP
                     Variaveis.id = Convert.ToInt16(dt.Rows[0][0]);
 
                     MessageBox.Show("Bem vindo " + Convert.ToString(dt.Rows[0][1]), "Login bem sucedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    
 
                     conexao.Close();
                 }

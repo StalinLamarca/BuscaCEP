@@ -77,7 +77,7 @@
             txtNomeUser.BackColor = Color.White;
             txtNomeUser.ForeColor = Color.Black;
             txtNomeUser.Location = new Point(294, 118);
-            txtNomeUser.MaxLength = 12;
+            txtNomeUser.MaxLength = 15;
             txtNomeUser.Name = "txtNomeUser";
             txtNomeUser.Size = new Size(137, 23);
             txtNomeUser.TabIndex = 1;
@@ -85,7 +85,7 @@
             // txtSenhaUser
             // 
             txtSenhaUser.Location = new Point(294, 171);
-            txtSenhaUser.MaxLength = 12;
+            txtSenhaUser.MaxLength = 11;
             txtSenhaUser.Name = "txtSenhaUser";
             txtSenhaUser.Size = new Size(137, 23);
             txtSenhaUser.TabIndex = 2;

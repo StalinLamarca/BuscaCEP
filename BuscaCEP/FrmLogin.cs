@@ -21,7 +21,7 @@ namespace Cadastro_CEP
             txtSenhaUser.Text = string.Empty;
             if (Variaveis.sucess)
             {//se tiver sucsso no logon, abre o frame de cadastro/consulta
-
+               
                 FrmDados dados = new FrmDados();
                 this.Hide();
                 dados.ShowDialog();

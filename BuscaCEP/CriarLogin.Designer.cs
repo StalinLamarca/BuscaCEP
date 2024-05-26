@@ -79,6 +79,7 @@
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(132, 27);
             txtLogin.TabIndex = 4;
+            txtLogin.KeyPress += txtLogin_KeyPress;
             // 
             // label3
             // 
@@ -99,6 +100,8 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(132, 27);
             txtSenha.TabIndex = 6;
+            txtSenha.UseSystemPasswordChar = true;
+            txtSenha.KeyPress += txtSenha_KeyPress;
             // 
             // label4
             // 
