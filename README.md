@@ -31,21 +31,23 @@ C# e
 SQL
 
 ## Front end
-C# Windows Form
+- C#
+- Windows Form
 
 
 ## Banco de dados
 
-SQL Compact Edition
+- SQL Compact Edition
 
 ## Como executar o projeto
 
-Pré-requisitos: .Net Core 8.0
+- Pré-requisitos: .Net Core 8.0
 
 ## clonar repositório
-
+```bash
 git clone https://github.com/StalinLamarca/BuscaCEP.git
 
+´´´
 ## executar o projeto
 
 Abrir BuscaCEP.sln
