@@ -42,9 +42,9 @@
             label6 = new Label();
             label7 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnSalvar = new Button();
+            btnEditar = new Button();
+            btApagar = new Button();
             txtNumero = new Controles.ControlesTextBox();
             label8 = new Label();
             dataGridView1 = new DataGridView();
@@ -183,34 +183,34 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
-            // button2
+            // btnSalvar
             // 
-            button2.Location = new Point(94, 412);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 24;
-            button2.Text = "Salvar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnSalvar.Location = new Point(94, 412);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(75, 23);
+            btnSalvar.TabIndex = 24;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += button2_Click;
             // 
-            // button3
+            // btnEditar
             // 
-            button3.Location = new Point(507, 412);
-            button3.Name = "button3";
-            button3.Size = new Size(99, 23);
-            button3.TabIndex = 25;
-            button3.Text = "Editar Dados";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnEditar.Location = new Point(507, 412);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(99, 23);
+            btnEditar.TabIndex = 25;
+            btnEditar.Text = "Editar Dados";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += button3_Click;
             // 
-            // button4
+            // btApagar
             // 
-            button4.Location = new Point(660, 411);
-            button4.Name = "button4";
-            button4.Size = new Size(111, 23);
-            button4.TabIndex = 26;
-            button4.Text = "Apagar dados";
-            button4.UseVisualStyleBackColor = true;
+            btApagar.Location = new Point(660, 411);
+            btApagar.Name = "btApagar";
+            btApagar.Size = new Size(111, 23);
+            btApagar.TabIndex = 26;
+            btApagar.Text = "Apagar dados";
+            btApagar.UseVisualStyleBackColor = true;
             // 
             // txtNumero
             // 
@@ -266,9 +266,9 @@
             Controls.Add(dataGridView1);
             Controls.Add(txtNumero);
             Controls.Add(label8);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btApagar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
             Controls.Add(button1);
             Controls.Add(label7);
             Controls.Add(txtUF);
@@ -310,9 +310,9 @@
         private Label label6;
         private Label label7;
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnSalvar;
+        private Button btnEditar;
+        private Button btApagar;
         private Controles.ControlesTextBox txtNumero;
         private Label label8;
         private DataGridView dataGridView1;

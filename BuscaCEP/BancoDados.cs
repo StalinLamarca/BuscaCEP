@@ -124,7 +124,7 @@ namespace BuscaCEP
 
                conexao.Open();
 
-                 busca= "SELECT [CEP],[LOGRADOURO],[COMPLEMENTO],[BAIRRO],[NUMERO], [CIDADE],[UF] FROM [ENDERECOS] WHERE [ID_USUARIO] = '" + Variaveis.id+ "' ORDER BY [ID]";
+                 busca= "SELECT [ID], [CEP],[LOGRADOURO],[COMPLEMENTO],[BAIRRO],[NUMERO], [CIDADE],[UF] FROM [ENDERECOS] WHERE [ID_USUARIO] = '" + Variaveis.id+ "' ORDER BY [ID]";
               
                 adap = new SQLiteDataAdapter(busca, conexao);
 

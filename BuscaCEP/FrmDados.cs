@@ -53,9 +53,11 @@ namespace BuscaCEP
 
 
             data.FrmDaDOS();
-
+            
             //joga dados carregados da variavel para o dataGrid
             dataGridView1.DataSource = Variaveis.dadosCarregados;
+            //oculta a coluna ID pra ficar bonitinho pro usuário
+            dataGridView1.Columns[0].Visible = false;
 
 
 
@@ -115,7 +117,7 @@ namespace BuscaCEP
 
 
             //pega os dados e joga nas variaveis pra salvar no sql
-            Variaveis.cep = mtxtCep.Text;
+            Variaveis.Cep = mtxtCep.Text;
             Variaveis.logradouro = txtRua.Text;
             Variaveis.complemento = txtComplemento.Text;
             Variaveis.bairro = txtBairro.Text;
@@ -132,32 +134,35 @@ namespace BuscaCEP
             bancoDados.FrmDaDOS();
             MessageBox.Show("Dados Salvos com sucesso!");
 
+            //após salvar, limpa todos campos para o usuario não duplicar,fazer edições excessivas
+            foreach (TextBox textBox in Controls.OfType<TextBox>())
+            {
+                textBox.Text = string.Empty;
+                mtxtCep.Text = string.Empty;
+            }
+
 
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string a = dataGridView1.CurrentCell.RowIndex.ToString();
+            //habilita somente a edição no metódo EditaDB;
+            Variaveis.Editar = true;
 
-
-            MessageBox.Show( dataGridView1.SelectedCells[0].Value.ToString() + "'");
-
-            //SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query2, "Data source =" + Variaveis.DB);
-            //DataTable dados = new DataTable();
-            //adaptador.Fill(dados);
-
-            //lblNome.Text = "Nome: " + dataGridView1.SelectedCells[1].Value.ToString();
-            //lblSexo.Text = "Sexo: " + dataGridView1.SelectedCells[2].Value.ToString();
-            //lblDataNasc.Text = "Data Nasc: " + dataGridView1.SelectedCells[4].Value.ToString();
-            //lblTelefone.Text = "Telefone " + dataGridView1.SelectedCells[6].Value.ToString();
-            //Variaveis.Grau = dataGridView1.SelectedCells[3].Value.ToString();
-
-
-            //pctAluno.Load(Convert.ToString(dados.Rows[0][0]));
-            //Variaveis.selecionada = (Convert.ToString(dados.Rows[0][0]));
-
-            //Variaveis.selec = dataGridView1.SelectedCells[0].Value.ToString();
+            // pega o ID da tabela em que o usuário está selecionado
+            //por questão de estética, o valor está oculto
+           Variaveis.idSelecionados = Convert.ToInt16(dataGridView1.SelectedCells[0].Value.ToString());
+            MessageBox.Show(Variaveis.idSelecionados.ToString());
+            //pega todos valores das linhas selecionadas e joga no data grid
+            mtxtCep.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            txtRua.Text = dataGridView1.SelectedCells[2].Value.ToString();
+            txtComplemento.Text = dataGridView1.SelectedCells[3].Value.ToString();
+            txtBairro.Text = dataGridView1.SelectedCells[4].Value.ToString();
+            txtNumero.Text = dataGridView1.SelectedCells[5].Value.ToString();
+            txtCidade.Text = dataGridView1.SelectedCells[6].Value.ToString();
+             txtUF.Text = dataGridView1.SelectedCells[7].Value.ToString();  
+           
         }
     }
 }
