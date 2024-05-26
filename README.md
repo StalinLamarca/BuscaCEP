@@ -34,25 +34,25 @@ SQL
 C# Windows Form
 
 
-#Banco de dados#: SQL Compact Edition
+## Banco de dados
+
+SQL Compact Edition
 
 ## Como executar o projeto
 
 Pré-requisitos: .Net Core 8.0
 
 ## clonar repositório
+
 git clone https://github.com/StalinLamarca/BuscaCEP.git
 
-
-
 ## executar o projeto
+
 Abrir BuscaCEP.sln
 Pré-requisitos: Visual Studio Commnunity
 
-
 ## instalar dependências
 dotnet add package Microsoft.SqlServer.Compact --version 4.0.8876.1
-
 
 # Autor
 
