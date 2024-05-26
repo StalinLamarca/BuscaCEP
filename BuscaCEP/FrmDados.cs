@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
-using System.Data.SQLite;
+using System.Data.SqlServerCe;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace BuscaCEP
             dataGridView1.EnableHeadersVisualStyles = false;
 
 
-            SQLiteConnection conexao = new SQLiteConnection("Data source =" + Variaveis.Db + "; Version = 3;");
+            SqlCeConnection conexao = new SqlCeConnection("Data source =" + Variaveis.Db + "; password=senhasenha;");
             // Objeto para inicializar buscas no sql
 
             //instancia objeto da Classe data
@@ -98,7 +98,7 @@ namespace BuscaCEP
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+           
             //para cada caixa de texto no formulario atual (dados)
             foreach (TextBox vazio in Controls.OfType<TextBox>())
             {
@@ -156,10 +156,22 @@ namespace BuscaCEP
         {
             //habilita somente a edição no metódo EditaDB;
             Variaveis.Editar = "Update";
-           
+
             // pega o ID da tabela em que o usuário está selecionado
             //por questão de estética, o valor está oculto
-            Variaveis.idSelecionados = Convert.ToInt16(dataGridView1.SelectedCells[0].Value.ToString());
+            try
+            {
+                //valida se há dados na tabela, caso não tenha, exibe a mensagem e retorna o bloco de código
+                Variaveis.idSelecionados = Convert.ToInt16(dataGridView1.SelectedCells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Não há dados a serem modificados!");
+                return;
+            }
+            
+           
             
             //pega todos valores das linhas selecionadas e joga no data grid
             mtxtCep.Text = dataGridView1.SelectedCells[1].Value.ToString();
@@ -177,7 +189,19 @@ namespace BuscaCEP
             //habilita somente o deletar no metódo EditaDB;
             Variaveis.Editar = "Deletar";
             EditaDB edita  = new EditaDB();
-            Variaveis.idSelecionados = Convert.ToInt16(dataGridView1.SelectedCells[0].Value.ToString());
+            try
+            {
+                //valida se há dados na tabela, caso não tenha, exibe a mensagem e retorna o bloco de código
+                Variaveis.idSelecionados = Convert.ToInt16(dataGridView1.SelectedCells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Não há dados a serem modificados!");
+                return;
+            }
+
+           
             edita.Editar();
             
         }

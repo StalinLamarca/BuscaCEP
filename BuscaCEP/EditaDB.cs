@@ -16,7 +16,7 @@ namespace BuscaCEP
             
             
             //Insere os valores na tabela endereço
-            string Insere = "INSERT INTO [enderecos] (CEP,LOGRADOURO,COMPLEMENTO,BAIRRO,NUMERO,CIDADE,UF,ID_USUARIO)" +
+            string Insere = "INSERT INTO [ENDERECOS] (CEP,LOGRADOURO,COMPLEMENTO,BAIRRO,NUMERO,CIDADE,UF,ID_USUARIO)" +
                "SELECT " +
                "'" + Variaveis.Cep + "'," +
                " '" + Variaveis.logradouro + "'," +
@@ -24,14 +24,14 @@ namespace BuscaCEP
                " '" + Variaveis.bairro + "', " +
                " '" + Variaveis.numero + "', " +
                " '" + Variaveis.cidade + "', " +
-               " '" + Variaveis.uf + "',ID " +
+               " '" + Variaveis.uf + "', ID " +
                //em referncia a tabela usuarios
-               "FROM  USUARIOS " +
+               "FROM  [USUARIOS] " +
                //em referencia ao usuario atual logado
                " WHERE [USUARIO] ='" + Variaveis.nome + "'";
 
             //atualiza os valores de acordo com o usuario logado
-            string Update = "UPDATE [enderecos] SET [CEP]= '" + Variaveis.Cep + "'," +
+            string Update = "UPDATE [enderecos] SET [CEP] = '" + Variaveis.Cep + "'," +
                 "[LOGRADOURO] ='" + Variaveis.logradouro + "'," +
                 "[COMPLEMENTO] ='" + Variaveis.complemento + "'," +
                 "[BAIRRO] = '" + Variaveis.bairro + "'," +
@@ -58,7 +58,7 @@ namespace BuscaCEP
                           " AND [enderecos].[id_usuario] ="+ Variaveis.id;
 
             //valida se o modo edição está ativo
-            if (Variaveis.Editar.Equals(Insere))
+            if (Variaveis.Editar.Equals("Novo"))
             {
                 manipular.Executar(Insere);
             }
@@ -75,7 +75,7 @@ namespace BuscaCEP
                 {
                     return;
                 }
-                else
+                else if(Variaveis.Editar.Equals("Deletar"))
 
                 {
                     

@@ -45,7 +45,7 @@ namespace Cadastro_CEP
         {
             //instancia operando para verificar se existe o banco de dados e se caso não existir, cria um novo com as tabelas.
             Operando operando = new Operando();
-            operando.Conexao();
+            operando.Criar();
         }
     }
 }

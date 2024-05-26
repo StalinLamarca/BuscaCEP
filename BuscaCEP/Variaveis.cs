@@ -26,7 +26,7 @@ namespace BuscaCEP
         public static DataTable dadosCarregados = new DataTable(); 
         public static int idSelecionados;
         public static string? uf { get; set; }
-        public static string Db  = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Dados.db";
+        public static string Db  = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Dados.sdf";
 
 
     }

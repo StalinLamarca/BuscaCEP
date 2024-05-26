@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.SqlServerCe;
 using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BuscaCEP
 {
     public class BancoDados
@@ -18,9 +19,9 @@ namespace BuscaCEP
 
 
         //string conexão banco de dados
-        SQLiteConnection conexao = new SQLiteConnection("Data source =" + Variaveis.Db + "; Version = 3;");
+        SqlCeConnection conexao = new SqlCeConnection("Data source=" + Variaveis.Db+ "; Password=senhasenha;" );
         // Objeto para inicializar buscas no sql
-        SQLiteDataAdapter adap;
+        SqlCeDataAdapter adap;
 
         //string padrão busca dados
         string busca= string.Empty;
@@ -33,7 +34,7 @@ namespace BuscaCEP
         {
 
             conexao.Open();
-            SQLiteCommand cmd = new SQLiteCommand(argumentos, conexao);
+            SqlCeCommand cmd = new SqlCeCommand(argumentos, conexao);
             cmd.ExecuteNonQuery();
 
             
@@ -59,7 +60,7 @@ namespace BuscaCEP
                 DataTable dt = new DataTable();
 
                 //faz a busca pelo critério da variavel busca no banco de dados
-                adap = new SQLiteDataAdapter(busca2, conexao);
+                adap = new SqlCeDataAdapter(busca2, conexao);
 
                 //preenche o datatable
                 adap.Fill(dt);
@@ -126,7 +127,7 @@ namespace BuscaCEP
 
                  busca= "SELECT [ID], [CEP],[LOGRADOURO],[COMPLEMENTO],[BAIRRO],[NUMERO], [CIDADE],[UF] FROM [ENDERECOS] WHERE [ID_USUARIO] = '" + Variaveis.id+ "' ORDER BY [ID]";
               
-                adap = new SQLiteDataAdapter(busca, conexao);
+                adap = new SqlCeDataAdapter(busca, conexao);
 
               
                 adap.Fill(Variaveis.dadosCarregados);
