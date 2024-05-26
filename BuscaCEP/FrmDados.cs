@@ -217,11 +217,14 @@ namespace BuscaCEP
             Variaveis.Editar = string.Empty;
 
         }
-
+        //botão responsável por exportar dados para o Excel
         private void btnExportar_Click(object sender, EventArgs e)
         {
 
-            //botão responsável por exportar dados para o Excel
+           
+            // carrega dados da classe Exportar.cs
+            Exportar exportar = new Exportar();
+            exportar.Dialog();
 
         }
     }
