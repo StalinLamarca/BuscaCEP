@@ -90,29 +90,32 @@
             // 
             // txtRua
             // 
-            txtRua.Font = new Font("Microsoft Sans Serif", 12F);
+            txtRua.Font = new Font("Century Gothic", 12F);
             txtRua.ForeColor = Color.FromArgb(64, 64, 64);
             txtRua.Location = new Point(25, 305);
+            txtRua.MaxLength = 50;
             txtRua.Name = "txtRua";
-            txtRua.Size = new Size(242, 26);
+            txtRua.Size = new Size(242, 27);
             txtRua.TabIndex = 14;
             // 
             // txtComplemento
             // 
-            txtComplemento.Font = new Font("Microsoft Sans Serif", 12F);
+            txtComplemento.Font = new Font("Century Gothic", 12F);
             txtComplemento.ForeColor = Color.FromArgb(64, 64, 64);
             txtComplemento.Location = new Point(25, 199);
+            txtComplemento.MaxLength = 50;
             txtComplemento.Name = "txtComplemento";
-            txtComplemento.Size = new Size(242, 26);
+            txtComplemento.Size = new Size(242, 27);
             txtComplemento.TabIndex = 9;
             // 
             // txtBairro
             // 
-            txtBairro.Font = new Font("Microsoft Sans Serif", 12F);
+            txtBairro.Font = new Font("Century Gothic", 12F);
             txtBairro.ForeColor = Color.FromArgb(64, 64, 64);
             txtBairro.Location = new Point(25, 254);
+            txtBairro.MaxLength = 50;
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(242, 26);
+            txtBairro.Size = new Size(242, 27);
             txtBairro.TabIndex = 17;
             // 
             // label4
@@ -126,11 +129,12 @@
             // 
             // txtCidade
             // 
-            txtCidade.Font = new Font("Microsoft Sans Serif", 12F);
+            txtCidade.Font = new Font("Century Gothic", 12F);
             txtCidade.ForeColor = Color.FromArgb(64, 64, 64);
             txtCidade.Location = new Point(25, 145);
+            txtCidade.MaxLength = 50;
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(242, 26);
+            txtCidade.Size = new Size(242, 27);
             txtCidade.TabIndex = 19;
             // 
             // label5
@@ -144,12 +148,14 @@
             // 
             // txtUF
             // 
-            txtUF.Font = new Font("Microsoft Sans Serif", 12F);
+            txtUF.Font = new Font("Century Gothic", 12F);
             txtUF.ForeColor = Color.FromArgb(64, 64, 64);
             txtUF.Location = new Point(289, 145);
+            txtUF.MaxLength = 2;
             txtUF.Name = "txtUF";
-            txtUF.Size = new Size(65, 26);
+            txtUF.Size = new Size(65, 27);
             txtUF.TabIndex = 21;
+            txtUF.KeyPress += txtUF_KeyPress;
             // 
             // label6
             // 
@@ -216,12 +222,14 @@
             // 
             // txtNumero
             // 
-            txtNumero.Font = new Font("Microsoft Sans Serif", 12F);
+            txtNumero.Font = new Font("Century Gothic", 12F);
             txtNumero.ForeColor = Color.FromArgb(64, 64, 64);
             txtNumero.Location = new Point(289, 199);
+            txtNumero.MaxLength = 4;
             txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(65, 26);
+            txtNumero.Size = new Size(65, 27);
             txtNumero.TabIndex = 28;
+            txtNumero.KeyPress += txtNumero_KeyPress;
             // 
             // label8
             // 

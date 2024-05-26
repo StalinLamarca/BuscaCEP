@@ -221,13 +221,40 @@ namespace BuscaCEP
         private void btnExportar_Click(object sender, EventArgs e)
         {
 
-           
+
             // carrega dados da classe Exportar.cs
             Exportar exportar = new Exportar();
-            
+
             exportar.Dialog(dataGridView1);
 
 
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //só permite que seja digitado números no campo N°
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+
+            {
+                //se a condição for verdadeira,segura o evento da tecla e não digita
+                e.Handled = true;
+
+            }
+        }
+
+        private void txtUF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //só permite digitar texto no campo UF
+            if (!(Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar)))
+            {
+                //se a condição for verdadeira,segura o evento da tecla e não digita
+                e.Handled = true;
+            }
+
+              
+               
+                
+                
         }
     }
 }
