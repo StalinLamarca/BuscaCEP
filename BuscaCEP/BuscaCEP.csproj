@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>kisspng-computer-icons-clip-art-look-icon-5ab053d8519273.7932003315215052403341.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="kisspng-computer-icons-clip-art-look-icon-5ab053d8519273.7932003315215052403341.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ViaCep" Version="4.1.495" />
