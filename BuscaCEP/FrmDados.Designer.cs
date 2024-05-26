@@ -211,6 +211,7 @@
             btApagar.TabIndex = 26;
             btApagar.Text = "Apagar dados";
             btApagar.UseVisualStyleBackColor = true;
+            btApagar.Click += btApagar_Click;
             // 
             // txtNumero
             // 

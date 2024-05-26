@@ -39,19 +39,58 @@ namespace BuscaCEP
                 "[CIDADE] = '" + Variaveis.cidade + "'," +
                 "[UF] = '" + Variaveis.uf + "'" +
                 //consulta a id da linha atual + a referncia id do usuario atual logado para atualizar
-                 " WHERE [ENDERECOS].id ="+Variaveis.idSelecionados+" AND [ENDERECOS].[id_usuario] = "+Variaveis.id;
+                " WHERE [ENDERECOS].id = " + Variaveis.idSelecionados+"  AND [ENDERECOS].[id_usuario] = "+Variaveis.id;
+           
 
 
+
+
+
+
+
+
+
+
+
+
+            string Deletar = "DELETE FROM [enderecos] "+
+                          "WHERE [enderecos].[ID] ="+ Variaveis.idSelecionados+
+                          " AND [enderecos].[id_usuario] ="+ Variaveis.id;
 
             //valida se o modo edição está ativo
-            if (!Variaveis.Editar)
+            if (Variaveis.Editar.Equals(Insere))
             {
                 manipular.Executar(Insere);
             }
-            else
+            //valida se o editar está ativo
+            else if(Variaveis.Editar.Equals("Update"))
             {
                 manipular.Executar(Update);
-                Variaveis.Editar = false;
+
+            }
+            else
+            {
+                //pergunta se quer deletar e pega o resultado
+               if(MessageBox.Show("Deseja mesmo deletar essa linha de valores?","Apagar",MessageBoxButtons.YesNo)== DialogResult.No) 
+                {
+                    return;
+                }
+                else
+
+                {
+                    
+                    //se for sim, executa o delete
+                    manipular.Executar(Deletar);
+                    BancoDados bancoDados = new BancoDados();
+                    //limpa a tabela e atualiza
+                    Variaveis.dadosCarregados.Clear();
+                    bancoDados.FrmDaDOS();
+                    MessageBox.Show("Dados deletados com sucesso!");
+                   
+                   
+                    Variaveis.Editar = string.Empty;
+                }
+               
             }
               
                
