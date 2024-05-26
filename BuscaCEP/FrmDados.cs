@@ -224,7 +224,9 @@ namespace BuscaCEP
            
             // carrega dados da classe Exportar.cs
             Exportar exportar = new Exportar();
-            exportar.Dialog();
+            
+            exportar.Dialog(dataGridView1);
+
 
         }
     }
