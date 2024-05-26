@@ -46,15 +46,17 @@ SQL
 ## clonar repositório
 ```bash
 git clone https://github.com/StalinLamarca/BuscaCEP.git
+```
+## Instalar dependências
+```bash
+dotnet add package Microsoft.SqlServer.Compact --version 4.0.8876.1
+```
 
-´´´
-## executar o projeto
+## Executar o projeto
 
 Abrir BuscaCEP.sln
 Pré-requisitos: Visual Studio Commnunity
 
-## instalar dependências
-dotnet add package Microsoft.SqlServer.Compact --version 4.0.8876.1
 
 # Autor
 
