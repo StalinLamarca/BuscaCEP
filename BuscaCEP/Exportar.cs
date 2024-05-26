@@ -24,7 +24,7 @@ namespace BuscaCEP
                 try
                 {
                     //Objeto para pegar o diretório do arquivo e nome + .CSV
-                    StreamWriter salvarArq = new StreamWriter(dialogo.FileName + ".csv");
+                    StreamWriter salvarArq = new StreamWriter(dialogo.FileName);
                     
                     //Varre todas tabelas da coluna atpe chegar ao limite
                     for (int i = 0; i < tabela.Columns.Count; i++)
