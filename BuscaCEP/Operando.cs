@@ -31,8 +31,8 @@ namespace BuscaCEP
                 string valores = "CREATE TABLE [Usuarios]"
                   + "( " +
                   "[ID] INT PRIMARY KEY IDENTITY(1,1), " +
-                  "[NOME] nvarchar(50), " +
-                  "[USUARIO] nvarchar(50)," +
+                  "[NOME] nvarchar(100), " +
+                  "[USUARIO] nvarchar(20)," +
                   "[SENHA] nvarchar(11))";
                 dados.Executar(valores);
 
@@ -52,13 +52,13 @@ namespace BuscaCEP
                 valores = "CREATE TABLE [Enderecos]"
                 + "( " +
                 "[ID] INT PRIMARY KEY IDENTITY(1,1), " +
-                "[CEP] nvarchar(50)," +
-                "[LOGRADOURO] nvarchar(30)," +
+                "[CEP] nvarchar(10)," +
+                "[LOGRADOURO] nvarchar(50)," +
                 "[COMPLEMENTO] nvarchar(30), " +
-                "[BAIRRO] nvarchar(30), " +
-                "[NUMERO] nvarchar(30), " +
-                "[CIDADE] nvarchar(30), " +
-                "[UF] nvarchar(30), " +
+                "[BAIRRO] nvarchar(50), " +
+                "[NUMERO] INT, " +
+                "[CIDADE] nvarchar(50), " +
+                "[UF] nvarchar(2), " +
                 "[ID_USUARIO] int, " +
                 "FOREIGN KEY([ID_USUARIO]) REFERENCES Usuarios([ID]));";
 
