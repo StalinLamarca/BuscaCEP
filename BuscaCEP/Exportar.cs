@@ -34,7 +34,7 @@ namespace BuscaCEP
                        salvarArq.Write(",");
                     }
                     //após salvar oo cabeçalhos, cria uma linha para preencher as linhas
-                    salvarArq.Write(salvarArq.NewLine);
+                    salvarArq.Write(salvarArq.NewLine,Encoding.UTF8);
 
                     foreach (DataGridViewRow dr in tabela.Rows)
                     {
@@ -46,7 +46,8 @@ namespace BuscaCEP
                         // salva o arquivo no direório com nome selecionado
 
                         //agora vai salvando todas linhas da tabela
-                        salvarArq.Write(salvarArq.NewLine);
+                        //o UTF8 serve pra expotar também caracteres especiais
+                        salvarArq.Write(salvarArq.NewLine,Encoding.UTF8);
                     }
                     salvarArq.Close();
                     MessageBox.Show("Arquivo Exportado com sucesso!");
